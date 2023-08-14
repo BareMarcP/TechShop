@@ -116,7 +116,7 @@ async function render_dropdown(obj) {
     const selectedValue = document.querySelector("#laptops");
     const feature_text = document.getElementById("feature-text");
 
-    img_path = "https://hickory-quilled-actress.glitch.me/assets/images/"
+    img_path = "https://hickory-quilled-actress.glitch.me/"
     img = document.getElementById("img");
 
     let price_val;
@@ -126,7 +126,11 @@ async function render_dropdown(obj) {
         price_val = curr_object["price"]
         feature_text.innerText = curr_object["specs"];
         feature_text.style.fontSize = "x-small";
-        img.src = img_path + curr_object["id"] + findImgFormat(curr_object["id"])
+        img.src = img_path + curr_object["image"]
+        // There is an error in for computer 5. The path is .png and not .jpg
+        if (curr_object["id"] == 5) {
+            img.src = "https://hickory-quilled-actress.glitch.me/assets/images/5.png"
+        } 
         price.innerHTML = price_val
 
         const computer_name = document.getElementById("computer_name")
@@ -149,19 +153,6 @@ async function render_dropdown(obj) {
     });
     
 })();
-
-function findImgFormat(value){
-    switch(value){
-        case 1:
-            return ".png";
-        case 2:
-            return ".png";
-        case 5:
-            return ".png"
-        default:
-            return ".jpg"
-    }
-}
 
 function updateHTML(){
     balance.innerHTML= userInfo.balance;
