@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Tech Shop</h1>
+        <section class="container">
+            <div class="item">
+              <h4>Joe Banker</h4>
+              <p id="check">balance:  <span id="balance"></span></p>
+              <p> debt:  <span id="debt"></span></p>
+              <button id=Loan> Get a loan</button>
+              <button id=RepayLoan> repay loan</button>
+            </div>
+            <div class="item">
+                <h4>Work</h4>
+                <p>Pay: <span id="pay"></span></p><br>
+                <button id=Bank> Bank</button>
+                <button id=Work> Work</button><br>
+            </div>
+            <div class="item">
+                <h4>Laptops</h4>
+                <select name="laptops" id="laptops">
+                  <option></option>
+                  </select>
+                  <h6>Features:</h6>
+                  <p id="feature-text"></p>
+            </div>
+        </section>
+        <section class="bigcontainer">
+            <!-- <div class="bigitem"> -->
+                <div class="bigitem">
+                    <img id="img" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png" width="150" height="135">
+                </div>
+                <div id="description" class="bigitem">
+                    <h3 id="computer_name">Computer</h3>
+                    <p id="computer_description"> </p>
+                </div>
+                <div id="buy_section" class="bigitem">
+                    <p> price:  <span id="price"></span></p>
+                    <button id=Buy> buy</button>         
+                </div>
+            <!-- </div> -->
+            
+        </section>
+        <script src="logic.js" async defer></script>
+    </body>
+    
+</html>
